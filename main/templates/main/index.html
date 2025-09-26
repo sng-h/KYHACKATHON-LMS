@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="main-header">
+        <span class="header-year">2025년</span>
+        <span class="header-semester">2학기</span>
+        <div class="header-current-week">
+            <span class="week-label">현재주차:</span>
+            <span class="week-info">4주차 2025-09-15 ~ 2025-09-21</span>
+        </div>
+        <h2 class="main-title">강의 리스트</h2>
+    </div>
+    <div class="course-list-container">
+        <div class="course-section">
+            <h3>학위과정</h3>
+            <div class="course-section-title">
+                <i class="ri-folder-open-fill"></i>
+                <span>사이버강의</span>
+            </div>
+            <div class="course-card">
+                <div class="card-content">
+                    <h4>글로벌여행영어(01반)</h4>
+                    <ul>
+                        <li>교수명: 교무처</li>
+                        <li>구분: /학점</li>
+                        <li>학과정: 정보없음</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="course-section">
+            <h3>일반강의</h3>
+            <div class="course-list-grid">
+                <div class="course-card">
+                    <div class="card-content">
+                        <a href="{% url 'course_detail' course_id=1 %}">
+                            <h4>개인정보보호 영향평가(01반)</h4>
+                        </a> 
+                        <ul>
+                            <li>교수명: 차건상</li>
+                            <li>구분: 학점/3학점</li>
+                            <li>학과명: 정보없음</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="card-content">
+                        <a href="{% url 'course_detail' course_id=1 %}">
+                            <h4>실전사물인터넷(IoT)보안실무(캡스톤디자인)(01반)</h4>
+                        </a>
+                        <ul>
+                            <li>교수명: 김동원</li>
+                            <li>구분: 학점/3학점</li>
+                            <li>학과명: 정보없음</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="card-content">
+                        <a href="{% url 'course_detail' course_id=1 %}"> 
+                        <h4>취약점진단</h4>
+                        </a>
+                        <ul>
+                            <li>교수명: 김동원</li>
+                            <li>구분: 학점/3학점</li>
+                            <li>학과명: 정보없음</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

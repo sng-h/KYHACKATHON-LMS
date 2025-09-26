@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <title>SMART KY 로그인</title>
+    <link href="{% static 'css/login.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+        <header class="login-header">
+            <img src="{% static 'images/logo.png' %}" alt="건양대학교 로고">
+            <h1>SMART KY</h1>
+        </header>
+
+        <main class="login-main">
+            <div class="login-box">
+                <div class="login-tabs">
+                    <button class="tab-btn active">ID/PW 인증</button>
+                    <button class="tab-btn">모바일 인증</button>
+                </div>
+                <form class="login-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="22501038">
+                    </div>
+                    <div class="form-group password-group">
+                        <input type="password" placeholder="Password를 입력하세요">
+                        <i class="ri-eye-off-line password-toggle"></i>
+                    </div>
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me">ID 저장</label>
+                    </div>
+                    <button type="submit" class="login-btn">로그인</button>
+                </form>
+                <div class="login-links">
+                    <a href="#" class="help-link">ID/Password 찾기</a>
+                    <a href="#" class="help-link">도움말</a>
+                    <a href="#" class="help-link">메뉴얼 보기</a>
+                </div>
+            </div>
+            
+            <aside class="login-help-box">
+                <h3 class="help-title">KY 로그인 도움말</h3>
+                <div class="help-content">
+                    <h4>모바일 인증</h4>
+                    <p>아이디 : 학번/교직원 번호</p>
+                    <p>인증방식 : 모바일 인증 앱을 설치 후 인증 설정</p>
+                    <p>이용대상 : 재학생, 교직원</p>
+                    <hr>
+                    <h4>ID/Password 인증</h4>
+                    <p>아이디 : 사용자 ID(학번/임번)</p>
+                    <p>비밀번호 : SMART KY Password</p>
+                    <p>이용대상 : 졸업생, 일반</p>
+                </div>
+            </aside>
+        </main>
+        
+        <div class="system-notice-box">
+            <h3>시스템 공지</h3>
+            <ul>
+                <li><span class="notice-type">일반</span> [24.12.30] 통합정보시스템 점검 안내 <span class="notice-date">2025.02.13</span></li>
+                <li><span class="notice-type">일반</span> [재학생] 로그인 방식 변경... <span class="notice-date">2025.04.21</span></li>
+                <li><span class="notice-type">일반</span> [25.02.14] 로그2 LMS 이용... <span class="notice-date">2025.03.06</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

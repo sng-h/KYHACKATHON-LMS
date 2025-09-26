@@ -1,0 +1,401 @@
+/* style.css */
+
+/* 전체 페이지 레이아웃을 위한 컨테이너 */
+.lms-container {
+    display: flex; /* 내부 요소들을 가로로 나란히 배치 */
+    min-height: 100vh; /* 화면 전체 높이를 차지하도록 설정 */
+    font-family: Arial, sans-serif;
+    color: #444;
+}
+
+/* ----- 대시보드 페이지 스타일 ----- */
+
+/* 대시보드 전체 컨테이너 */
+.dashboard-container {
+    padding: 30px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* 대시보드 헤더 */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #06325a;
+    margin: 0;
+}
+
+.user-link {
+    font-size: 14px;
+    color: #06325a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 주요 서비스 그리드 */
+.main-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+/* 서비스 카드 */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #06325a;
+    margin-bottom: 5px;
+}
+
+.service-card .status {
+    font-size: 12px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* 시스템 공지 박스 */
+.system-notice-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.system-notice-box h3 {
+    font-size: 18px;
+    color: #06325a;
+    font-weight: bold;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.system-notice-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.system-notice-box li {
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 10px;
+}
+
+.notice-type {
+    background-color: #06325a;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    margin-right: 10px;
+}
+
+.notice-date {
+    float: right;
+    color: #888;
+}
+
+/* 왼쪽 사이드바 스타일 */
+.sidebar {
+    width: 280px; /* 고정된 너비 */
+    background-color: #007B54;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* 그림자 효과 */
+}
+.profile-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+/* 오른쪽 메인 콘텐츠 영역 스타일 */
+.main-content-area {
+    flex-grow: 1; /* 남은 공간을 모두 차지하도록 설정 */
+    background-color: #f4f5f7; /* 연한 회색 배경 */
+    padding: 20px 40px; /* 상하좌우 여백 */
+}
+
+/* 메인 헤더 */
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-year, .header-semester {
+    font-size: 24px;
+    font-weight: bold;
+    color: #555;
+}
+
+.header-current-week {
+    color: #3498db;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.main-title {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 15px;
+    color: #333;
+}
+
+/* 강의 목록 컨테이너 */
+.course-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.course-section h3 {
+    color: #34495e;
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+
+.course-section-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    color: #06325a;
+    margin-bottom: 10px;
+}
+
+.course-section-title i {
+    font-size: 20px;
+}
+
+/* 강의 카드 공통 스타일 */
+.course-card {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.course-card h4 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #06325a;
+}
+
+.course-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    color: #666;
+}
+
+.course-card ul li {
+    margin-bottom: 5px;
+}
+
+.course-card ul li:first-child {
+    font-weight: bold;
+}
+
+/* 일반 강의 그리드 레이아웃 */
+.course-list-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* ----- 강의실 페이지 ----- */
+/* 강의실 페이지 메인 헤더 */
+.main-content-area .main-header {
+    background-color: #f8f9fa;
+    padding: 15px 25px;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #495057;
+    font-size: 14px;
+}
+
+.main-content-area .main-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #212529;
+    margin: 0;
+}
+
+/* 주차별 목록 컨테이너 */
+.week-list-container {
+    margin-top: 20px;
+    padding: 0 25px;
+}
+
+/* 각 주차별 아이템 */
+.week-item {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* 주차 헤더 (주차, 기간, 학습시간) */
+.week-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #ced4da;
+    margin-bottom: 15px;
+}
+
+.week-number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.week-date {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+/* 학습 자료 및 버튼 컨테이너 */
+.learning-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.learning-material {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.material-type {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.study-time {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 버튼 스타일 */
+.material-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-study {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.btn-study:hover {
+    background-color: #ced4da;
+}
+
+.btn-review {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.btn-review:hover {
+    background-color: #0a58ca;
+}
+
+/* 사이드바 메뉴 리스트 */
+.sidebar .menu-list {
+    list-style: none; /* 목록 기호 제거 */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.sidebar .menu-list li {
+    margin-bottom: 5px;
+}
+
+.sidebar .menu-list a {
+    display: flex; /* 아이콘과 텍스트를 나란히 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    padding: 10px 15px;
+    color: #fff; /* 글자색 흰색 */
+    text-decoration: none; /* 밑줄 제거 */
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+/* 메뉴 항목에 마우스를 올렸을 때 */
+.sidebar .menu-list a:hover {
+    background-color: #016546; /* 배경색 변경 */
+}
+
+/* 아이콘 스타일 */
+.sidebar .menu-list a i {
+    font-size: 12px;
+    margin-right: 8px; /* 아이콘과 텍스트 사이 간격 */
+}
+
+/* 활성화된 메뉴 항목 */
+.sidebar .menu-list a.active {
+    background-color: #3498db;
+    font-weight: bold;
+}
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/front/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/lms/lms_layout.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="lms-container">
+        <div class="sidebar">
+            <div class="profile-container">
+                <div class="profile-img">
+                    <img src="{% static 'images/profile.png' %}" alt="프로필 이미지">
+                </div>
+                <span class="user-name">홍승희(22501038)</span>
+                <div class="profile-buttons">
+                    <a href="#" class="profile-btn">
+                        <i class="ri-settings-line"></i>
+                        <span>수정</span>
+                    </a>
+                    <a href="#" class="profile-btn">
+                        <i class="ri-logout-box-r-line"></i>
+                        <span>로그아웃</span>
+                    </a>
+                </div>
+            </div>
+            
+            <ul class="menu-list">
+                <li>
+                    <a href="{% url 'index' %}">
+                        <i class="ri-dashboard-line"></i>
+                        <span>캘린더</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'course_detail' course_id=1 %}">
+                        <i class="ri-book-open-line"></i>
+                        <span>강의실</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-calendar-line"></i>
+                        <span>학습포토폴리오</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="ri-folder-open-line"></i>
+                        <span>기초학습역량</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}">
+                        <i class="ri-dashboard-line"></i>
+                        <span>학습현황</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}">
+                        <i class="ri-dashboard-line"></i>
+                        <span>비교과강의관리</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'index' %}">
+                        <i class="ri-dashboard-line"></i>
+                        <span>수업평가 및 성적조회</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content-area">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>

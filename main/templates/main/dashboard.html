@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="dashboard-header">
+        <div class="header-left">
+            <h1 class="page-title">SMART KY 통합인증시스템</h1>
+        </div>
+        <div class="header-right">
+            <a href="#" class="user-link">마이페이지</a>
+        </div>
+    </div>
+
+    <div class="dashboard-main-content">
+        <h2>주요 서비스 바로가기</h2>
+        <div class="main-services-grid">
+            <div class="service-card">
+                <img src="{% static 'images/lms.png' %}" alt="LMS">
+                <h3>LMS</h3>
+                <span class="status">통합인증 적용 시스템</span>
+            </div>
+            </div>
+        
+        <div class="system-notice-box">
+            <h3>시스템 공지</h3>
+            <ul>
+                <li><span class="notice-type">일반</span> [24.12.30] 통합정보시스템 점검 안내 <span class="notice-date">2025.02.13</span></li>
+                </ul>
+        </div>
+    </div>
+{% endblock %}
